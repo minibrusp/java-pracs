@@ -20,7 +20,7 @@ public class BankAccount {
   public synchronized void deposit(double amount) {
     if (amount > 0) {
       this.balance += amount;
-      System.out.println("\nDeposit Success: you have " + this.balance + " remaining balance.");
+      System.out.println("\nDeposit Success: you have " + df.format(this.balance) + " remaining balance.");
     }
     else 
       System.out.println("\nDeposit failed: must enter a positive value");
@@ -29,7 +29,7 @@ public class BankAccount {
   public synchronized void withdraw(double amount) {
     if (amount <= this.balance) {
       this.balance -= amount;
-      System.out.println("\nWithdraw Success: you have " + this.balance + " remaining balance.");
+      System.out.println("\nWithdraw Success: you have " + df.format(this.balance) + " remaining balance.");
     }
     else 
       System.out.println("\nWithdraw failed: insufficient balance");
@@ -39,6 +39,6 @@ public class BankAccount {
     System.out.println(this.toString());
   }
   public String toString() {
-    return "Account #: " + accountNumber + "\nAccountHolder: " + accountHolder + "\nBalance: " + df.format(balance);
+    return "\nAccount #: " + accountNumber + "\nAccountHolder: " + accountHolder + "\nBalance: " + df.format(balance);
   }
 }

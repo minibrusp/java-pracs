@@ -4,7 +4,7 @@ public class Bank {
   private ArrayList<BankAccount> accounts;
 
   public Bank() {
-    this.accounts = new ArrayList<>();
+    this.accounts = new ArrayList<BankAccount>();
     System.out.println("Bank Established");
   }
 
@@ -17,8 +17,12 @@ public class Bank {
   }
 
   public void displayAllAccounts() {
+    if(this.accounts.size() == 0) {
+      System.out.println("\nThe Bank has no registered Accounts yet.");
+    }
+
     for (BankAccount account : accounts) {
-      System.out.println("\n" + account);
+      System.out.println(account);
     }
   }
   public BankAccount findAccount(String accountNumber) {
