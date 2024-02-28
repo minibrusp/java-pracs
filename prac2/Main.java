@@ -29,7 +29,6 @@ public class Main {
     System.out.println(nums.indexOf(8));
     System.out.println(nums.contains(5));
 
-    
 
 
   }
