@@ -37,7 +37,7 @@ public class Main {
 
     // mathSubject.displayStudents();
     
-    // scienceSubject.displayStudents();
+    scienceSubject.displayStudents();
 
     mathSubject.displayGrades();
 
