@@ -28,6 +28,6 @@ public class Grade implements Comparable<Grade> {
 
   @Override
   public int compareTo(Grade that) {
-    return this.grade == that.grade ? 1 : -1;
+    return this.grade > that.grade ? 1 : -1;
   }
 }
